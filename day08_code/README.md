@@ -1,4 +1,4 @@
-Day 8 : Kubernetes Deployment, Replication Controller and ReplicaSet Explained  
+# **Day 8 : Kubernetes Deployment, Replication Controller and ReplicaSet Explained**  
   
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
 Today I want to share the Day 8 of #40DaysOfKubernetes journey with #Piyushsachdeva .  
