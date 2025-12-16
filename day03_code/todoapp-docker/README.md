@@ -1,4 +1,4 @@
-Day 3: Multi Stage Docker Build  
+# **Day 3: Multi Stage Docker Build**  
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
 Today I want to share the Day 3 of #40DaysOfKubernetes journey with #Piyushsachdeva .  
