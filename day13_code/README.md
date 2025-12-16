@@ -1,4 +1,4 @@
-Day 13 : Static Pods, Manual Scheduling, Labels, and Selectors in Kubernetes  
+# **Day 13 : Static Pods, Manual Scheduling, Labels, and Selectors in Kubernetes**  
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
 Today I want to share the Day 13 of #40DaysOfKubernetes journey with #Piyushsachdeva  
