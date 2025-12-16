@@ -1,4 +1,4 @@
-Day 12 : DaemonSets, Job and Cronjob in Kubernetes  
+# **Day 12 : DaemonSets, Job and Cronjob in Kubernetes**  
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
 Today I want to share the Day 12 of #40DaysOfKubernetes journey with #Piyushsachdeva  
