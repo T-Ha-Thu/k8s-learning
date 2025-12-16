@@ -1,4 +1,4 @@
-Day 15 : Kubernetes Node Affinity Explained | How Node Affinity Works  
+# **Day 15 : Kubernetes Node Affinity Explained | How Node Affinity Works**  
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
 Today I want to share the Day 15 of #40DaysOfKubernetes journey with #Piyushsachdeva  
