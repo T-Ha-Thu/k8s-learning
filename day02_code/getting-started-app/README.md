@@ -1,4 +1,4 @@
-Day 2: How to Dockerize a Project  
+# **Day 2: How to Dockerize a Project**  
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
 Today I want to share the Day 2 of #40DaysOfKubernetes journey with #Piyushsachdeva .  
