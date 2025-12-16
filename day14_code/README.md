@@ -1,4 +1,4 @@
-Day 14 : Taints and Tolerations in Kubernetes
+# **Day 14 : Taints and Tolerations in Kubernetes**
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,
 
 Today I want to share the Day 14 of #40DaysOfKubernetes journey with #Piyushsachdeva
