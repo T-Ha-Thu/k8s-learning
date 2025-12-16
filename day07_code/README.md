@@ -1,4 +1,4 @@
-Day 7 :  Pod In Kubernetes Explained | Imperative VS Declarative Way | YAML Tutorial  
+# **Day 7 :  Pod In Kubernetes Explained | Imperative VS Declarative Way | YAML Tutorial**  
   
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
 Today I want to share the Day 7 of #40DaysOfKubernetes journey with #Piyushsachdeva .Below are the lecture of Day 7 learning.  
