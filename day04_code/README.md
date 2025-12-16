@@ -1,4 +1,4 @@
-Day 4: 𝗪𝗵𝘆 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀? 𝗦𝗼𝗹𝘃𝗶𝗻𝗴 𝗖𝗼𝗻𝘁𝗮𝗶𝗻𝗲𝗿 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲𝘀  
+# **Day 4: 𝗪𝗵𝘆 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀? 𝗦𝗼𝗹𝘃𝗶𝗻𝗴 𝗖𝗼𝗻𝘁𝗮𝗶𝗻𝗲𝗿 𝗖𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲𝘀**  
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
 Today I want to share the Day 4 of #40DaysOfKubernetes journey with #Piyushsachdeva .  
@@ -27,6 +27,7 @@ Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day04/ta
 #piyushsachdeva #TheCloudOpsCommunity  
   
 <img width="1905" height="1184" alt="viber_image_2025-11-05_15-40-50-689" src="https://github.com/user-attachments/assets/0a14bfc7-f968-4e63-88fb-92122883e496" />  
+
 
 
 
