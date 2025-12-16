@@ -1,4 +1,4 @@
-Day 10 : Kubernetes Namespace Explained  
+# **Day 10 : Kubernetes Namespace Explained**  
   
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
