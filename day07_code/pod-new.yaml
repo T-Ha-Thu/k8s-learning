@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    env: demo
+  name: nginx-old
+spec:
+  containers:
+  - image: nginx
+    name: nginx-old
+
