@@ -1,4 +1,4 @@
-Day 16 : Kubernetes Requests and Limits  
+# **Day 16 : Kubernetes Requests and Limits**  
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
 Today I want to share the Day 16 of #40DaysOfKubernetes journey with #Piyushsachdeva  
