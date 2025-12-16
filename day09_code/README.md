@@ -1,4 +1,4 @@
-Day 9: Kubernetes Services Explained - ClusterIP vs NodePort vs Loadbalancer vs External  
+# **Day 9: Kubernetes Services Explained - ClusterIP vs NodePort vs Loadbalancer vs External**  
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
   
 Today I want to share the Day 9 of #40DaysOfKubernetes journey with #Piyushsachdeva .Below are the lecture of Day 9 learning.  
