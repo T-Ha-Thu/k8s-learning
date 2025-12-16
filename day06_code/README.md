@@ -1,4 +1,4 @@
-Day 6 : Setting Up a Multi-Node Kind Cluster  
+# **Day 6 : Setting Up a Multi-Node Kind Cluster**  
   
 Hello #LinkedInCommunity and #TheCloudOpsCommunity ,  
 Today I want to share the Day 6 of #40DaysOfKubernetes journey with #Piyushsachdeva .Below are the lecture of Day 6 learning.
