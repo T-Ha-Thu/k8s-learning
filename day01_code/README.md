@@ -1,4 +1,4 @@
-Day 1: Exploring Docker and Containerization
+# **Day 1: Exploring Docker and Containerization**
 
 Hello #LinkedInCommunity and #TheCloudOpsCommunity , 
 
@@ -21,3 +21,4 @@ Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day01/RE
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
