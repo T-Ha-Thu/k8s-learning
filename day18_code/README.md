@@ -4,28 +4,28 @@ Hello #LinkedInCommunity and #TheCloudOpsCommunity ,
 Today I want to share the Day 18 of #40DaysOfKubernetes journey with #Piyushsachdeva  
 Below are the lecture of Day 18 learning.  
   
-What are probe in kubernetes?  
+*What are probe in kubernetes?*    
 In Kubernetes, Probes are health-check mechanisms used by the kubelet to determine the state of a container and to decide when to start traffic,  
 when to restart a container, or when to consider it ready for service.  
 They are fundamental to building reliable, self-healing applications in Kubernetes.  
   
-Types of Probes in Kubernetes  
+*Types of Probes in Kubernetes*    
 Kubernetes supports three probe types, each serving a distinct operational purpose.  
 1. Liveness Probe  
 2. Readiness Probe  
 3. Startup Probe  
   
-Liveness Probe  
+*Liveness Probe*    
 - If the liveness probe fails repeatedly, Kubernetes restarts the container.  
 - Used to recover from deadlocks, infinite loops, or hung processes.  
   
-Readiness Probe  
+*Readiness Probe*    
 - If the readiness probe fails:  
   - The Pod remains running  
   - But it is removed from Service load balancing  
 - No restart occurs.  
   
-Startup Probe  
+*Startup Probe*    
 - Used for slow-starting applications  
 - Until startup probe succeeds:  
   - Liveness and readiness probes are disabled  
