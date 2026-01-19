@@ -69,19 +69,19 @@ For real-world use:
   
 #Step 3: Calculate Public Keys  
 For Alice:  
-  
+```bash
 Public Key=( g^Alice private ) mod  𝑃  
 	 =( 6^5 ) mod  13  
    	 =7776 mod  13  
 	 =2  
-  
+```
 For Bob:  
-  
+```bash
 Public Key=( g^Bob private ) mod  𝑃  
 	 =( 6^4 ) mod  13  
    	 =1296 mod  13  
-	 =9  
-  
+	 =9
+```    
 #Step 4: Exchange Public Keys  
 Alice sends her public key to Bob.  
 Bob sends his public key to Alice.  
@@ -91,14 +91,17 @@ Bob sends his public key to Alice.
 Shared Secret=(Other Party’s Public Key)^Private Key mod 𝑃  
   
 For Alice:  
+```bash
 Share Secret = ( 9^5 ) mod 13  
-	     = 59049 mod 13  
-	     = 3  
+	         = 59049 mod 13  
+	         = 3
+``` 
 For Bob:  
+```bash
 Share Secret = ( 2^4 ) mod 13  
-	     = 16 mod 13  
-	     = 3  
-  
+	         = 16 mod 13  
+	         = 3
+```   
 Both sides now have the same shared secret.  
   
 Check out the today's lecture from Original Mentor #Piyushsachdeva  
@@ -108,4 +111,5 @@ Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
 
