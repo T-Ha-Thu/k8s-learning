@@ -44,7 +44,62 @@ SSL/TLS certificates provide all three.
 - Server responds with certificate  
 - Browser verifies certificate  
 - Browser sends encrypted session key  
-- Secure communication starts  
+- Secure communication starts
+
+#Diffie-Hellman Key Exchange Cryptography  
+<img width="902" height="747" alt="DH" src="https://github.com/user-attachments/assets/1f17362c-5cc8-476d-8972-c232efd87a78" />  
+  
+#Step 1: Public Parameters  
+Two public parameters are given:  
+(1) Prime Number (P) = 13  
+(2) Generator (g) = 6  
+  
+These are public, meaning everyone can know them. You can’t just pick any number; there are allowed ranges:  
+(1) Parameter P = minimum 2048-bit (0 to 2047 for small example)  
+(2) Generator g = small integer, typically 2  
+  
+#Step 2: Private Keys  
+Each party chooses their own private key, which is secret.  
+(1) Alice’s private key = 5  
+(2) Bob’s private key = 4  
+  
+For real-world use:  
+(1) Private key = 256-bit  
+(2) Valid range: = 1 ≤ private key ≤ p - 1  
+  
+#Step 3: Calculate Public Keys  
+For Alice:  
+  
+Public Key=( g^Alice private ) mod  𝑃  
+	 =( 6^5 ) mod  13  
+   	 =7776 mod  13  
+	 =2  
+  
+For Bob:  
+  
+Public Key=( g^Bob private ) mod  𝑃  
+	 =( 6^4 ) mod  13  
+   	 =1296 mod  13  
+	 =9  
+  
+#Step 4: Exchange Public Keys  
+Alice sends her public key to Bob.  
+Bob sends his public key to Alice.  
+  
+#Step 5: Calculate Shared Secret  
+  
+Shared Secret=(Other Party’s Public Key)^Private Key mod 𝑃  
+  
+For Alice:  
+Share Secret = ( 9^5 ) mod 13  
+	     = 59049 mod 13  
+	     = 3  
+For Bob:  
+Share Secret = ( 2^4 ) mod 13  
+	     = 16 mod 13  
+	     = 3  
+  
+Both sides now have the same shared secret.  
   
 Check out the today's lecture from Original Mentor #Piyushsachdeva  
 Youtube - https://youtu.be/njT5ECuwCTo?si=yX4oR4EJmryJes6G  
@@ -53,3 +108,4 @@ Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
