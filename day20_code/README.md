@@ -46,10 +46,10 @@ SSL/TLS certificates provide all three.
 - Browser sends encrypted session key  
 - Secure communication starts
 
-#Diffie-Hellman Key Exchange Cryptography  
+# Diffie-Hellman Key Exchange Cryptography  
 <img width="902" height="747" alt="DH" src="https://github.com/user-attachments/assets/1f17362c-5cc8-476d-8972-c232efd87a78" />  
   
-#Step 1: Public Parameters  
+# Step 1: Public Parameters  
 Two public parameters are given:  
 (1) Prime Number (P) = 13  
 (2) Generator (g) = 6  
@@ -58,7 +58,7 @@ These are public, meaning everyone can know them. You can’t just pick any numb
 (1) Parameter P = minimum 2048-bit (0 to 2047 for small example)  
 (2) Generator g = small integer, typically 2  
   
-#Step 2: Private Keys  
+# Step 2: Private Keys  
 Each party chooses their own private key, which is secret.  
 (1) Alice’s private key = 5  
 (2) Bob’s private key = 4  
@@ -67,7 +67,7 @@ For real-world use:
 (1) Private key = 256-bit  
 (2) Valid range: = 1 ≤ private key ≤ p - 1  
   
-#Step 3: Calculate Public Keys  
+# Step 3: Calculate Public Keys  
 For Alice:  
 ```bash
 Public Key=( g^Alice private ) mod  𝑃  
@@ -86,7 +86,7 @@ Public Key=( g^Bob private ) mod  𝑃
 Alice sends her public key to Bob.  
 Bob sends his public key to Alice.  
   
-#Step 5: Calculate Shared Secret  
+# Step 5: Calculate Shared Secret  
   
 Shared Secret=(Other Party’s Public Key)^Private Key mod 𝑃  
   
@@ -111,5 +111,6 @@ Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
 
 
