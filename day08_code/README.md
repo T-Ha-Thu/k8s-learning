@@ -42,7 +42,7 @@ kubectl explain rc
 vim nginx.yaml
 ```
 ```yaml
-apiVersion: v1
+apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: nginx-replicas
