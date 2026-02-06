@@ -1,4 +1,4 @@
-<img width="1018" height="120" alt="6" src="https://github.com/user-attachments/assets/77c23bbc-340e-43c6-9891-558ced20f069" /># **Day 22 : Kubernetes Authentication and Authorization Simply Explained**
+# **Day 22 : Kubernetes Authentication and Authorization Simply Explained**
 # **Day 23 : Kubernetes RBAC Explained - Role Based Access Control Kubernetes**
 # **Day 24 : Kubernetes RBAC Continued - Clusterrole and Clusterrole Binding**
 
@@ -160,18 +160,18 @@ kubectl auth can-i get pod --as learner
 U can get pod only bcoz of in the role.yaml ( resources: ["pods"] ) if u want other resources u can add them. resources: ["pods", "deploy", "replicas"]  
 Finally u can also check the kubeconfig file again this user "learner" will see....  
 
-# 3) Creating ClusterRole and ClusterRoleBinding
-ClusterRole is just like Role but not one namespace,across ALL namespaces(or cluster-scoped resources).
-ClusterRoleBinding is just like RoleBinding but not one namespace, across the entire Cluster.
-Not Cluster Level Resources (Namespace-scoped resource)
+# 3) Creating ClusterRole and ClusterRoleBinding  
+ClusterRole is just like Role but not one namespace,across ALL namespaces(or cluster-scoped resources).  
+ClusterRoleBinding is just like RoleBinding but not one namespace, across the entire Cluster.  
+Not Cluster Level Resources (Namespace-scoped resource)  
 ```bash
 kubectl api-resources --namespaced=true
 ```
-CLuster Level Resources (Cluster-scoped resource)
+CLuster Level Resources (Cluster-scoped resource)  
 ```bash
 kubectl api-resources --namespaced=false
 ```
-Creating Clusterrole
+Creating Clusterrole  
 ```bash
 kubectl create clusterrole node-reader --verb=list,get,watch --resource=node
 ```
@@ -179,9 +179,9 @@ kubectl create clusterrole node-reader --verb=list,get,watch --resource=node
 kubectl get clusterrole | grep node-reader
 kubectl describe clusterrole/node-reader
 ```
-<img width="1151" height="252" alt="7" src="https://github.com/user-attachments/assets/9b4e6533-6007-4529-8b62-752aea8e6fa8" />  
-
-Creating Clusterrolebinding
+<img width="1151" height="252" alt="7" src="https://github.com/user-attachments/assets/9b4e6533-6007-4529-8b62-752aea8e6fa8" />    
+  
+Creating Clusterrolebinding  
 ```bash
 kubectl create clusterrolebinding reader-binding --clusterrole=node-reader --user=learner
 ```
@@ -189,33 +189,33 @@ kubectl create clusterrolebinding reader-binding --clusterrole=node-reader --use
 kubectl get clusterrolebinding | grep reader-binding
 kubectl describe clusterrolebinding/reader-binding
 ```
-<img width="1216" height="326" alt="8" src="https://github.com/user-attachments/assets/76d4205b-932d-4c48-93d1-4283fc08e608" />  
-
+<img width="1216" height="326" alt="8" src="https://github.com/user-attachments/assets/76d4205b-932d-4c48-93d1-4283fc08e608" />    
+  
 ```bash
 kubectl config get-contexts
 ```
-
-Change to learner context
+  
+Change to learner context  
 ```bash
 kubectl auth can-i get nodes --as black
 kubectl config use-context black
 kubectl get nodes
 kubectl describe node cka-cluster1-control-plane
 ```
-<img width="1507" height="511" alt="9" src="https://github.com/user-attachments/assets/d5aa01c1-c614-4f11-acb8-62f447e49747" />  
-
-  
-Check out the today's lecture from Original Mentor #Piyushsachdeva  
-Youtube - day_22 ( https://www.youtube.com/watch?v=P0bogYEyfeI&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=23 )
-          day_23 ( https://www.youtube.com/watch?v=uGcDt7iNFkE&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=24 )
-          day_24 ( https://www.youtube.com/watch?v=DswQe7shSa4&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=25 )
-Github -  day_22 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day22 )
-          day_23 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day23 )
-          day_24 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day24 ) 
+<img width="1507" height="511" alt="9" src="https://github.com/user-attachments/assets/d5aa01c1-c614-4f11-acb8-62f447e49747" />    
+   
+Check out the today's lecture from Original Mentor #Piyushsachdeva    
+Youtube - day_22 ( https://www.youtube.com/watch?v=P0bogYEyfeI&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=23 )  
+          day_23 ( https://www.youtube.com/watch?v=uGcDt7iNFkE&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=24 )  
+          day_24 ( https://www.youtube.com/watch?v=DswQe7shSa4&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=25 )  
+Github -  day_22 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day22 )  
+          day_23 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day23 )  
+          day_24 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day24 )   
 Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!  
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
 
 
 
