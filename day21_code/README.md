@@ -151,7 +151,7 @@ After this showing like that
 
 Copy this and paste the .crt file OR change like this  
 ```bash
-kubectl get csr black -o jsonpath='{.status.certificate}' | base64 --decode > black.crt
+kubectl get csr learner -o jsonpath='{.status.certificate}' | base64 --decode > learner.crt
 ```
     
 Check out the today's lecture from Original Mentor #Piyushsachdeva  
@@ -161,6 +161,7 @@ Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
 
 
 
