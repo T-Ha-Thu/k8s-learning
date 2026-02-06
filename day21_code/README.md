@@ -92,7 +92,7 @@ replace request with ur decoded base64 key
 kubectl apply -f csr.yaml
 ```
 ```bash
-kubectl get certificate
+kubectl get csr
 ```
 Showing like that "not approving"  
 <img width="1046" height="72" alt="Screenshot 2026-01-24 204700" src="https://github.com/user-attachments/assets/40f03196-0620-4eb8-b3b2-1ad57b6f7631" />  
@@ -102,13 +102,13 @@ Showing like that "not approving"
 kubectl certificate approve learner
 ```
 ```bash
-kubectl get certificate
+kubectl get csr
 ```
 <img width="1016" height="87" alt="Screenshot 2026-01-24 204700" src="https://github.com/user-attachments/assets/307785ef-8fb9-4121-99f3-2d5b65a638ab" />  
   
 # 5) Retrieve the certificate from the CSR  
 ```bash
-kubectl get certificate learner -o yaml > issue.yaml
+kubectl get csr learner -o yaml > issue.yaml
 ```
 It will generate like that  
 ```yaml
@@ -158,6 +158,7 @@ Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
 
 
 
