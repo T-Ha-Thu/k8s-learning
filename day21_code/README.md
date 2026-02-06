@@ -148,9 +148,12 @@ echo "<certificate>" | base64 -d
 ```
 After this showing like that  
 <img width="793" height="427" alt="final" src="https://github.com/user-attachments/assets/0d18b888-9c73-4ff7-9c70-1d7a671b9a05" />  
-  
-Now,u can copy this and place this in kubeconfig...so, u can manage the cluster with the user of learner ....  
-  
+
+to change csr to crt
+```bash
+kubectl get csr black -o jsonpath='{.status.certificate}' | base64 --decode > black.crt
+```
+    
 Check out the today's lecture from Original Mentor #Piyushsachdeva  
 Youtube - https://youtu.be/LvPA-z8Xg4s?si=ienVWmcV3ey14FKj  
 Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day21/readme.md  
@@ -158,6 +161,7 @@ Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
 
 
 
