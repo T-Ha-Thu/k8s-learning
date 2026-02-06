@@ -149,7 +149,7 @@ echo "<certificate>" | base64 -d
 After this showing like that  
 <img width="793" height="427" alt="final" src="https://github.com/user-attachments/assets/0d18b888-9c73-4ff7-9c70-1d7a671b9a05" />  
 
-to change csr to crt
+Copy this and paste the .crt file OR change like this  
 ```bash
 kubectl get csr black -o jsonpath='{.status.certificate}' | base64 --decode > black.crt
 ```
@@ -161,6 +161,7 @@ Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
 
 
 
