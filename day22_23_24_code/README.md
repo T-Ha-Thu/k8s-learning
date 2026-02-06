@@ -205,16 +205,19 @@ kubectl describe node cka-cluster1-control-plane
 <img width="1507" height="511" alt="9" src="https://github.com/user-attachments/assets/d5aa01c1-c614-4f11-acb8-62f447e49747" />    
    
 Check out the today's lecture from Original Mentor #Piyushsachdeva    
-Youtube - day_22 ( https://www.youtube.com/watch?v=P0bogYEyfeI&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=23 )  
-          day_23 ( https://www.youtube.com/watch?v=uGcDt7iNFkE&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=24 )  
-          day_24 ( https://www.youtube.com/watch?v=DswQe7shSa4&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=25 )  
-Github -  day_22 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day22 )  
-          day_23 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day23 )  
-          day_24 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day24 )   
+Youtube -  
+day_22 ( https://www.youtube.com/watch?v=P0bogYEyfeI&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=23 )  
+day_23 ( https://www.youtube.com/watch?v=uGcDt7iNFkE&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=24 )  
+day_24 ( https://www.youtube.com/watch?v=DswQe7shSa4&list=PLl4APkPHzsUUOkOv3i62UidrLmSB8DcGC&index=25 )  
+Github -  
+day_22 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day22 )  
+day_23 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day23 )  
+day_24 ( https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day24 )   
 Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!  
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
 
 
 
