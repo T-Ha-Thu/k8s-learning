@@ -9,19 +9,31 @@ Below are the lecture of Day 22,23 and 24 learning.
   
 # What is Authentication and Authorization in K8s?  
   
-# Authentication ( Who you are? )  
+# Authentication ( AuthN )  
+Authentication = Who are you?  
 Authentication is the process of verifying the identity of a user or system.  
 Kubernetes needs to know who is making the request. This is done via authentication mechanisms.  
 Authentication methods is Certificates that sign by Cluster CA.( Client-certificate-data + Client-key-data in kubeconfig )  
+
+Example :  
+Office = Kubernetes Cluster  
+Show NRC/ID Card = Authentication  
+Guard checks your ID = Kubernetes checks your identity  
   
-# Authorization ( Who you can do? )  
+# Authorization ( AuthZ )  
+Authorization = What are you allowed to do?  
 Authorization is the process of determining what actions or resources a verified user is allowed to access.  
 Kubernetes knows who you are, it checks what actions you are allowed to perform.  
 Authorization modes are  
 1) RBAC( Role-Based Access Control )  
 2) ABAC( Attribute-Based Access Control )  
 3) Webhook  
-4) Node  
+4) Node
+
+Example :  
+Office = Kubernetes Cluster  
+Enter Building = Authentication  
+Access Department Room = Authorization  
   
 # What is RBAC?  
 RBAC (Role-Based Access Control) is Kubernetes’s authorization mechanism that defines  
@@ -52,8 +64,92 @@ Authorization = What can you do
 Role = Namespace permissions  
 RoleBinding = Who gets them  
 ClusterRole = Global permissions  
-ClusterRoleBinding = Global assignment
+ClusterRoleBinding = Global assignment  
+  
+# How Authentication and Authorization work in Kubernetes Cluster?  
+# 1)CA ( Certificate Authority ) jobs in Kubernetes  
+A CA (Certificate Authority) is needed in the cluster to perform trusted identity verification.  
+It acts as the trusted root to validate certificates for users, kube-apiserver, kubelet, controller-manager, scheduler, etc.  
 
+# CA location  
+In a default Kubernetes installation (kubeadm, kind), the CA certificates are stored on the control plane node under /etc/kubernetes/pki/:  
+/etc/kubernetes/pki/ca.crt = Cluster CA certificate ( public )  
+/etc/Kubernetes/pki/ca.key = Cluster CA private key  
+
+# CA Flow  
+During cluster initialization, ca.key and ca.crt are generated and set as the cluster-wide trust root.  
+This CA is then used to sign other certificates like apiserver.crt, kubelet.crt, admin.crt, etc.  
+  
+Example :  
+CA means "Head Office HR" who verifies staff ID cards and adds a signature.  
+kube-apiserver,kubelet and admin mean "Staff" who has the signature from the CA acts as a trusted employee.  
+
+# What is kubeconfig?  
+Kubeconfig is essentially a configuration file that Kubernetes uses to determine how to connect to a cluster and who you are when accessing it.  
+Think of it as your “login and directions” to a Kubernetes cluster.  
+u can find /home/user/.kube/config  
+Kubeconfig has 3 sections such as Clusters,Users and Contexts.  
+  
+Example :  
+Clusters = Office Building  
+User = Employee  
+Context = user want to go which buidling(cluster)  
+Kubeconfig = Employee ID Card + key + Map to office  
+
+# 2)User Request Flow(Kubectl to Kube-apiserver)  
+# Step (1)  
+# Kubeclt request from user  
+When user run kubectl commad ,kubectl itself reads .kube/config and grab the cluster server endpoint,CA and client cert/key.  
+Then builds https request to kube-apiserver,includes client certificate for authentication.  
+
+# Step (2)  
+# Kube-apiserver authenticates the user  
+kube-apiserver gets client cert ( user.crt ) and validates signature with cluster CA ( ca.crt ).  
+If valid , kube-apiserver attaches user info into the kube-apiserver.yaml in the path of /etc/kubernetes/manifest/ in the cluster.  
+  
+Example :  
+Showing ID at gate and then gate guard(kube-apiserver) confirms "Yes,this ID is signed by our HR(CA)" so,this user is authenticated...  
+
+# Step (3)  
+# Kube-apiserver authorizes request  
+Kube-apiserver checks RBAC polocies ( Role,RoleBinding,ClusterRole,ClusterRoleBinding )  
+  
+Example :  
+AuthN = ID checked at gate  
+AuthZ = Gate guard checks if user is allowed into somewhere  
+
+# 3)Kube-apiserver certificates and connecting to other components  
+Now , user section is done and kube-apiserver is also acts as a client for other control plane components.  
+For Kubelet components, kube-apiserver uses apiserver.key and .crt to talk kubelet HTTPS endpoints.  
+For ETCD components, kube-apiserver uses apiserver-etcd-client.key and .crt to access etcd securely.  
+For Scheduler and Controller-manager, kube-apiserver uses apiserver.key and .crt to connect cluster internal API access.  
+They are contain in the path of /etc/kubernetes/pki/ of cluster.  
+  
+Example :  
+Above example user is only inside the building not in the department room.  
+Gate guard(kube-apiserver) also needs IDs to enter department room (kubelet) that presents its own certified ID(apiserver.crt).  
+It's verified by server room security(kubelet CA).  
+  
+# 4)Connection to /etc/Kubernetes/manifests  
+After Step 1,2 and 3 ,on the control plane node,kubernetes components like  
+- kube-apiserver.yaml  
+- kube-scheduler.yaml  
+- kube-controller-manager.yaml  
+- etcd.yaml  
+are run as static pods.  
+kubelet monitors /etc/Kubernetes/manifests/ ,if a new yaml file appears kubelet will automatically launch that pod and mounts the certs(/etc/Kubernetes/pki/) inside it.  
+if the yaml changes,kubelet will update/restart the pod.  
+kube-apiserver reads its certs and key to starts serving HTTPS.  
+kube-apiserver reads client-ca-file to authenticates incoming requests from kubectl,kubelets,etc.  
+
+Example:  
+CA = Head Office HR (issues trusted IDs)  
+User Cert = User's office ID  
+kubeconfig = Wallet containing ID + map to cluster office  
+kube-apiserver = Gate guard(authN/authZ) + internal staff(auth to other components)  
+PKI folder = Vault storing all trusted IDs and Keys  
+Manifests folder = Scripts telling kubelet to launch static pods with certs mounted  
+  
 # Let's do LAB  
 
 1) Creating key,csr and crt
@@ -217,6 +313,7 @@ Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!
   
 #Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
 #piyushsachdeva #TheCloudOpsCommunity  
+
 
 
 
