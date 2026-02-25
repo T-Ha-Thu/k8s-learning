@@ -117,13 +117,14 @@ ls -alrth
 U can check the token with the above secret  
 <img width="1185" height="222" alt="13" src="https://github.com/user-attachments/assets/803e6789-10ac-4849-aecb-f2d0ce8e6cbc" />  
 
-Check out the today's lecture from Original Mentor #Piyushsachdeva
-Youtube - https://www.youtube.com/watch?v=k2iCq7IlMKM&t=353s
-Github - https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day25
-Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!
+Check out the today's lecture from Original Mentor #Piyushsachdeva  
+Youtube - https://www.youtube.com/watch?v=k2iCq7IlMKM&t=353s  
+Github - https://github.com/piyushsachdeva/CKA-2024/tree/main/Resources/Day25  
+Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!  
+  
+#Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps  
+#piyushsachdeva #TheCloudOpsCommunity  
 
-#Kubernetes #Docker # DevOps #TechLearning #Containerization #CloudOps
-#piyushsachdeva #TheCloudOpsCommunity
 
 
 
