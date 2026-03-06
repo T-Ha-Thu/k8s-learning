@@ -275,7 +275,7 @@ telnet db 3306
 <img width="413" height="153" alt="9" src="https://github.com/user-attachments/assets/aedf3d25-bc6d-4235-adee-a86dbfb154b0" />  
   
 Check out the today's lecture from Original Mentor #Piyushsachdeva  
-Youtube - https://www.youtube.com/watch?v=eVtnevr3Rao 
+Youtube - https://www.youtube.com/watch?v=eVtnevr3Rao  
 Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day26/readme.md  
 Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!  
   
