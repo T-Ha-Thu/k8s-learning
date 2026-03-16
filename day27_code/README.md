@@ -155,7 +155,7 @@ U can get node from master node with this command and then u will se like this .
   
 Ok now, u have done ur k8s cluster using Kubeadm in AWS...  
 
-Check out the today's lecture from Original Mentor #Piyushsachdeva  
+Check out the today's lecture from Original Mentor #Piyushsachdeva 
 Youtube - https://www.youtube.com/watch?v=WcdMC3Lj4tU&t=765s  
 Github - https://github.com/piyushsachdeva/CKA-2024/blob/main/Resources/Day27/readme.md  
 Special thanks to Piyush sachdeva &The CloudOps Community for the guidance!  
