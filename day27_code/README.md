@@ -10,18 +10,25 @@ Below are the lecture of Day 26 learning.
 2.Select Security group  
 3.Create Security group for master node  
 <img width="1911" height="806" alt="1" src="https://github.com/user-attachments/assets/b959f581-16bd-495d-b7f3-4a2644a6fdb0" />  
+  
 4.Create Security group for worker node  
 <img width="1602" height="726" alt="2" src="https://github.com/user-attachments/assets/967eab93-acaf-4e0a-af34-1b8eba323519" />  
+  
 5.Create EC2 for master node with this specification  
 <img width="1542" height="837" alt="3" src="https://github.com/user-attachments/assets/224e89b4-9dd0-4342-a724-451feaeeccfa" />  
+  
 6.Create EC2 for worker node with this specification  
 <img width="1535" height="832" alt="4" src="https://github.com/user-attachments/assets/b5a63742-fa88-4e53-9be6-bc2406975df6" />  
+  
 7.When EC2 are ready to use  
 <img width="1600" height="427" alt="5" src="https://github.com/user-attachments/assets/eb0dbffd-7003-415c-b6a4-9ca4939f9d0e" />  
+  
 8.Pls copy the SSH command
 <img width="1883" height="737" alt="6" src="https://github.com/user-attachments/assets/04958b8f-86e1-4e89-ac76-1c80f3f15ae8" />  
+  
 9.Before login with SSH pls download first the .pem key and pls go to the .pem directory 
 <img width="752" height="221" alt="7" src="https://github.com/user-attachments/assets/6ccb67cf-d4ae-411a-86fb-177acf7533f0" />  
+  
 10.Finally you are inside the EC2 of master node also worker node too  
 <img width="1190" height="667" alt="8" src="https://github.com/user-attachments/assets/8aae18c5-98c7-49fe-aa0b-1dd43a5274b8" />  
 
@@ -141,8 +148,11 @@ kubeadm join 172.31.89.206:6443 --token r3fz2k.dpg7h2ot57wqncf3 \
         --discovery-token-ca-cert-hash sha256:60ae6ed6ec6839ba4f32805705c037e6ed5472be6b45327705a050371a6295fb
 ```
 <img width="1612" height="420" alt="9" src="https://github.com/user-attachments/assets/3289c530-f10b-4cff-bbdb-b715fa914343" />  
+  
 U can get node from master node with this command and then u will se like this ....  
+  
 <img width="795" height="142" alt="10" src="https://github.com/user-attachments/assets/6ec3aa0c-854b-4440-8739-e3c3cf54fb28" />  
+  
 Ok now, u have done ur k8s cluster using Kubeadm in AWS...  
 
 Check out the today's lecture from Original Mentor #Piyushsachdeva  
